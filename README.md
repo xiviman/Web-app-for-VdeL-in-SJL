@@ -22,5 +22,4 @@ Con esta aplicación se busca modernizar la gestión del programa Vaso de Leche,
 llegue a quienes más lo necesitan de manera transparente, rápida y organizada.
 
 👩‍💻 Autoras: 
-Gherika Loyola & Xiomara Vigilio 
-Estudiantes de Ingeniería de Sistemas.
+Gherika Loyola & Xiomara Vigilio / Estudiantes de Ingeniería de Sistemas.
