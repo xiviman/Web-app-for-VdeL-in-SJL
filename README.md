@@ -17,10 +17,10 @@ contribuyendo a una gestión más eficiente, ordenada y cercana a los beneficiar
 - Visual Studio Code – entorno de desarrollo
 - Git + GitHub – control de versiones
 
-🎯 Objetivo
+🎯 Objetivo: 
 Con esta aplicación se busca modernizar la gestión del programa Vaso de Leche, asegurando que el apoyo social 
 llegue a quienes más lo necesitan de manera transparente, rápida y organizada.
 
-👩‍💻 Autoras
+👩‍💻 Autoras: 
 Gherika Loyola & Xiomara Vigilio 
 Estudiantes de Ingeniería de Sistemas.
