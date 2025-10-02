@@ -1,0 +1,273 @@
+:root {
+    --bg-primary: #fdf1f1;
+    --navbar-bg: #789DBC;
+    --header-bg: #E8A0BF;
+    --text-light: #FFFFFF;
+    --text-dark: #4F4F4F;
+    --highlight: #A5D6A7;
+    --hover-highlight: #90CAF9;
+    --icon-active: #1E88E5;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general */
+body {
+    background: var(--bg-primary); /* Fondo actualizado */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark); /* Texto oscuro */
+}
+
+
+div {
+    padding: 20px;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #4a154b;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Bordes redondeados externos */
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #a163a5; /* Color amatista */
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+tr:nth-child(even) {
+    background-color: #f3e8ff; /* Fondo lila suave */
+}
+
+tr:hover {
+    background-color: #e2d4f0; /* Gris lila al pasar el cursor */
+    transition: background-color 0.3s ease;
+}
+
+/* Botones */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Botón de Eliminar */
+a[href*='eliminar_distribucion'],
+a[href*='eliminar_beneficiario'] {
+    display: inline-block;
+    background-color: #ffc1c1; /* Rojo pastel claro */
+    border: 2px solid #ff8a8a; /* Borde más oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    transition: background-color 0.3s, transform 0.2s; /* Efecto suave */
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Negrita */
+}
+
+a[href*='eliminar_distribucion']:hover,
+a[href*='eliminar_beneficiario']:hover {
+    background-color: #ff8a8a; /* Rojo pastel más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    cursor: pointer; /* Cambia el cursor */
+}
+
+a[href*='eliminar_distribucion']:active,
+a[href*='eliminar_beneficiario']:active {
+    background-color: #ff6b6b; /* Rojo más intenso al presionar */
+    transform: scale(0.95); /* Disminuye ligeramente el tamaño */
+}
+
+/* Botón de Editar */
+a[href*='editar_beneficiario'] {
+    display: inline-block;
+    background-color: #b3e5fc; /* Azul pastel claro */
+    border: 2px solid #81d4fa; /* Borde más oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    transition: background-color 0.3s, transform 0.2s; /* Efecto suave */
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Negrita */
+}
+
+a[href*='editar_beneficiario']:hover {
+    background-color: #81d4fa; /* Azul pastel más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    cursor: pointer; /* Cambia el cursor */
+}
+
+a[href*='editar_beneficiario']:active {
+    background-color: #4fc3f7; /* Azul más intenso al presionar */
+    transform: scale(0.95); /* Disminuye ligeramente el tamaño */
+}
+
+/* Botón de Añadir (Crear) */
+a[href*='crear_beneficiario'] {
+    display: inline-block;
+    background-color: #c8e6c9; /* Verde pastel claro */
+    border: 2px solid #a5d6a7; /* Borde más oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    transition: background-color 0.3s, transform 0.2s; /* Efecto suave */
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Negrita */
+}
+
+a[href*='crear_beneficiario']:hover {
+    background-color: #a5d6a7; /* Verde pastel más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    cursor: pointer; /* Cambia el cursor */
+}
+
+a[href*='crear_beneficiario']:active {
+    background-color: #81c784; /* Verde más intenso al presionar */
+    transform: scale(0.95); /* Disminuye ligeramente el tamaño */
+}
+
+/* Imagen dentro de los botones */
+a img {
+    vertical-align: middle; /* Alineación de la imagen */
+    width: 20px; /* Tamaño de la imagen */
+    height: 20px;
+}
+
+/* Estilo de transición de botón al hacer clic */
+a:active {
+    transform: scale(0.98);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Detalles adicionales */
+table, th, td {
+    border: none;
+}
+
+table {
+    border-radius: 10px;
+    background: #fefefe;
+    overflow: hidden;
+}
+
+th {
+    background-color: #b69db6; /* Tono pastel para encajar con el aesthetic */
+}
+
+td {
+    border-top: 1px solid #d3cce3;
+}
+
+
+
+
+
+/* Incrementando los estilos para los botones de imprimir, buscar y regresar y el formulario de búsqueda */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 10px;
+    border: 2px solid #E1BEE7; /* Bordes suaves */
+    border-radius: 15px; /* Bordes redondeados */
+    font-size: 15px;
+    margin-right: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.search-button, .reset-button, .print-button {
+    background-color: var(--highlight); /* Color pastel */
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordes ovalados */
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.search-button:hover, .reset-button:hover, .print-button:hover {
+    background-color: var(--hover-highlight); /* Color más intenso */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transform: translateY(-3px); /* Efecto de levitar */
+}
+
+.search-button:active, .reset-button:active, .print-button:active {
+    background-color: var(--icon-active); /* Color más oscuro */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+    transform: translateY(1px); /* Efecto de presionar */
+}
+
+.reset-icon, .print-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons-container button {
+    background-color: #add8e6; /* Azul pastel */
+}
+
+.buttons-container button:hover {
+    background-color: #87cefa; /* Azul más intenso */
+}
+
+/* Botones con estilos específicos */
+.search-button {
+    background-color: #B3E5FC; /* Azul pastel */
+}
+
+.reset-button {
+    background-color: #E1BEE7; /* Morado pastel */
+}
+
+.print-button {
+    background-color: #FA8FB1; /* Verde pastel */
+}

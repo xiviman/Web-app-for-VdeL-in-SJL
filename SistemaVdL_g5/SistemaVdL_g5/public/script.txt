@@ -1,0 +1,67 @@
+-- Crear base de datos
+CREATE DATABASE vaso_leche_comite8;
+USE vaso_leche_comite8;
+
+-- Tabla para los usuarios del sistema (solo un usuario encargado)
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL, -- Almacenada de forma segura (encriptada)
+    nombre VARCHAR(100) NOT NULL
+);
+
+-- Tabla para los beneficiarios del programa
+CREATE TABLE beneficiarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombres VARCHAR(100) NOT NULL,
+    apellido_paterno VARCHAR(50) NOT NULL,
+    apellido_materno VARCHAR(50) NOT NULL,
+    dni CHAR(8) NOT NULL UNIQUE,
+    fecha_nacimiento DATE NOT NULL,
+    edad INT NOT NULL,
+    condicion ENUM('Madres Gestantes', 'Madres Lactantes', 'Niños de 0 a 6', 'Niños de 7 a 13', 'Adulto Mayor', 'Discapacitados') NOT NULL,
+    direccion VARCHAR(255),
+    nombre_apoderado VARCHAR(100),
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- Tabla de inventario para gestionar productos
+CREATE TABLE inventario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    producto VARCHAR(100) NOT NULL,
+    cantidad INT NOT NULL,
+    umbral_alerta INT NOT NULL, -- Nivel mínimo de inventario para generar alerta
+    fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Tabla para el control de distribución de productos
+CREATE TABLE distribuciones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    beneficiario_id INT NOT NULL,
+    producto VARCHAR(100) NOT NULL,
+    cantidad INT NOT NULL,
+    fecha_entrega DATE NOT NULL,
+    FOREIGN KEY (beneficiario_id) REFERENCES beneficiarios(id) ON DELETE CASCADE
+);
+
+-- Tabla para definir criterios de cálculo de leche por beneficiario
+CREATE TABLE criterios_calculo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    edad_min INT NOT NULL,
+    edad_max INT NOT NULL,
+    cantidad_leche INT NOT NULL
+);
+
+-- Tabla para almacenar logs o reportes (opcional)
+CREATE TABLE logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descripcion TEXT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO criterios_calculo (edad_min, edad_max, cantidad_leche) VALUES (0, 6, 500);  -- Niños de 0 a 6 años
+INSERT INTO criterios_calculo (edad_min, edad_max, cantidad_leche) VALUES (7, 13, 300); -- Niños de 7 a 13 años
+INSERT INTO criterios_calculo (edad_min, edad_max, cantidad_leche) VALUES (14, 64, 200); -- Adultos
+INSERT INTO criterios_calculo (edad_min, edad_max, cantidad_leche) VALUES (65, 120, 400); -- Adultos mayores

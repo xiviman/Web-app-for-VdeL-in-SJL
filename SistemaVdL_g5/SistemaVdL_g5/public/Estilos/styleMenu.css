@@ -1,0 +1,106 @@
+html, body {
+    height: 100%; /* Make sure the body takes the full height */
+    margin: 0; /* Remove default margin */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Full height */
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center; /* Center dashboard items horizontally */
+    gap: 20px; /* Space between items */
+    margin-bottom: 20px; /* Space below dashboard */
+}
+
+/* Estilos Generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Contenedor Principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Tarjetas de Gráficos */
+.chart-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 48%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: floatEffect 3s ease-in-out infinite;
+}
+
+.chart-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de movimiento más notorio */
+@keyframes floatEffect {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Aumento el movimiento para hacerlo más notable */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Canvas - Gráficos */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .chart-card {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    .chart-card {
+        width: 48%;
+    }
+}

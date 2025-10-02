@@ -1,0 +1,138 @@
+:root {
+    --bg-primary: #fdf1f1;
+    --navbar-bg: #789DBC;
+    --header-bg: #E8A0BF;
+    --text-light: #FFFFFF;
+    --text-dark: #4F4F4F;
+    --highlight: #A5D6A7;
+    --hover-highlight: #90CAF9;
+    --icon-active: #1E88E5;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general */
+body {
+    background: var(--bg-primary); /* Fondo actualizado */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark); /* Texto oscuro */
+}
+
+
+.container {
+    padding: 20px;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar el contenedor */
+    position: relative; /* Posicionamiento relativo para los elementos internos */
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #4a154b; /* Berenjena medio */
+}
+
+/* Nuevo Panel para formulario */
+.form-panel {
+    background-color: #ffffff; /* Fondo blanco para el panel */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos */
+    margin: 20px auto; /* Margen superior e inferior para espacio */
+}
+
+/* Formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos */
+}
+
+/* Etiquetas y selectores */
+label {
+    margin-bottom: 5px;
+    text-align: center; /* Centrar el texto de las etiquetas */
+}
+
+/* Cajas de texto */
+select, input[type="number"], input[type="date"] {
+    width: 80%; /* Ancho del 80% del panel para las cajas de texto */
+    max-width: 250px; /* Ancho máximo para las cajas de texto */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para las cajas de texto */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+button {
+    padding: 8px 15px; /* Ajustar el tamaño del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #4caf50; /* Verde */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto; /* Ajustar el ancho al contenido */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el cursor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Asegurarse de que el panel no toque otros módulos */
+.panel {
+    margin-bottom: 20px; /* Espacio en la parte inferior del panel */
+}
+
+/* Estilo general para el asterisco de los campos obligatorios */
+.required {
+    color: red; /* Color rojo para el asterisco */
+}
+
+/* Cajas de texto y combo boxes */
+select, input[type="number"], input[type="date"], input[type="text"] { /* Agregar input[type="text"] aquí */
+    width: 80%; /* Ancho del 80% del panel para las cajas de texto */
+    max-width: 300px; /* Aumento del ancho máximo para las cajas de texto */
+    padding: 12px; /* Aumentar el espaciado interno */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para las cajas de texto */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+button {
+    display: flex; /* Usar flexbox para centrar el texto */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #4caf50; /* Verde */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%; /* Ancho del 80% del panel para el botón */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    text-align: center; /* Alinear el texto al centro */
+    font-size: 16px; /* Ajustar el tamaño de la fuente para que sea legible */
+}
+
+button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el cursor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+

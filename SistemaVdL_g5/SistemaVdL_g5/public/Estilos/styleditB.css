@@ -1,0 +1,104 @@
+:root {
+    --bg-primary: #fdf1f1;
+    --navbar-bg: #789DBC;
+    --header-bg: #E8A0BF;
+    --text-light: #FFFFFF;
+    --text-dark: #4F4F4F;
+    --highlight: #A5D6A7;
+    --hover-highlight: #90CAF9;
+    --icon-active: #1E88E5;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general */
+body {
+    background: var(--bg-primary); /* Fondo actualizado */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark); /* Texto oscuro */
+}
+
+.container {
+    padding: 20px;
+    max-width: 700px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar el contenedor */
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #4a154b; /* Berenjena medio */
+    margin-bottom: 20px; /* Separación con el panel */
+}
+
+/* Panel */
+.panel {
+    background-color: #ffffff;
+    padding: 50px; /* Espaciado interno ajustado */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px var(--shadow-color);
+    margin-top: 30px;
+    width: calc(100% - 40px); /* Ajustar ancho al contenedor */
+    box-sizing: border-box;
+}
+
+/* Formulario */
+.panel form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+/* Columnas del formulario */
+.form-column {
+    width: 45%; /* Espacio igual entre columnas */
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+
+/* Etiquetas y selectores */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px; /* Ajustar tamaño para una mejor lectura */
+    color: var(--text-dark);
+}
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px var(--shadow-color);
+}
+/* Botón */
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: var(--text-light);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+    box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+/* Estilo para el asterisco de los campos requeridos */
+.required {
+    color: red;
+    font-weight: bold;
+}
